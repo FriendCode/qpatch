@@ -52,3 +52,4 @@ function qMethod(method) {
 
 // Exports
 exports.qClass = qClass;
+exports.qMethod = qMethod;
