@@ -17,8 +17,15 @@ function qClass(cls, methodExceptions) {
     newCls.name = cls.name;
 
     _.methods(cls.prototype).forEach(function(method) {
-        // Build new function
-        newCls.prototype[method] = qMethod(cls.prototype[method]);
+        // Don't change internal functions
+        var f;
+        if(method[0] === '_' || _.contains(methodExceptions, method)) {
+            f = cls.prototype[method];
+        } else {
+            f = qMethod(cls.prototype[method]);
+        }
+        // Set function
+        newCls.prototype[method] =f;
     });
 
     return newCls;
