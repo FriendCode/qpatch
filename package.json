@@ -1,6 +1,6 @@
 {
   "name": "qpatch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Module for patching JS Classes using callbacks to use Q promises",
   "main": "index.js",
   "scripts": {
