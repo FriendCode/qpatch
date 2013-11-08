@@ -8,7 +8,7 @@ qpatch
 ```js
 var qClass = require('qpatch');
 
-var newClass = qClass(someOldClass, ['methods_to_exclude]);
+var newClass = qClass(someOldClass, ['methods_to_exclude', '...']);
 
 // newClass' methods now return promises instead of accepting callbacks
 
