@@ -37,7 +37,10 @@ function qMethod(method) {
         var args = _.toArray(arguments);
 
         // Add callback
-        args.push(d.makeNodeResolver());
+        args.push(function(err, value) {
+            if(err) return d.reject(err);
+            return d.resolve(value);
+        });
 
         // Call function
         method.apply(this, args);
