@@ -19,6 +19,10 @@
     "classes",
     "methods"
   ],
+  "dependencies": {
+    "q": "0.9.6",
+    "underscore": "1.4.4"
+  },
   "author": "aaron.omullan@friendco.de",
   "license": "Apache v2"
 }
